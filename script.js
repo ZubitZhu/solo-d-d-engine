@@ -1,8 +1,8 @@
 function generaNpc() {
-    //var stringaDestinazione = document.getElementById("risultatoNPC");
-    //stringaDestinazione.innerHTML = "Io sono il tuo nuovo NPC!"
-    alert("Livello Chaos: " + getChaosLevel);
-    alert("Tiro d100: " + dicePercent);
+    var stringaDestinazione = document.getElementById("risultatoNPC");
+    stringaDestinazione.innerHTML = getChaosLevel;
+    //alert("Livello Chaos: " + getChaosLevel);
+    //alert("Tiro d100: " + dicePercent);
 }
 
 function getChaosLevel() {
