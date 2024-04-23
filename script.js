@@ -27,6 +27,82 @@ function getRandom(lista){
     var risultato = lista[tiroDiDado - 1];
     return risultato;
 }
+  
+function generatePowerLevel(livelloCaos){
+    if(livelloCaos==0){
+        return;
+    } else if (livelloCaos >= 1 && livelloCaos <3){ // Caos 1 o 2
+        var tiraDado = dicePercent();
+        if(tiraDado == 1 || tiraDado == 2) {
+            console.log("Eseguito");
+            return "Molto più debole del";
+        } else if(tiraDado >= 3 && tiraDado < 11){
+            return "Leggermente più debole del";
+        } else if(tiraDado >= 11 && tiraDado < 91){
+            return "Equivalente al";
+        } else if(tiraDado >= 91 && tiraDado < 99){
+            return "Un po' più forte del";
+        } else {
+            return "Molto più forte del";
+        }
+    } else if (livelloCaos >= 3 && livelloCaos < 5){ // Caos 3 o 4
+        var tiraDado = dicePercent();
+        if(tiraDado < 5) {
+            console.log("Eseguito");
+            return "Molto più debole del";
+        } else if(tiraDado >= 5 && tiraDado < 16){
+            return "Leggermente più debole del";
+        } else if(tiraDado >= 16 && tiraDado < 86){
+            return "Equivalente al";
+        } else if(tiraDado >= 86 && tiraDado < 97){
+            return "Un po' più forte del";
+        } else {
+            return "Molto più forte del";
+        }
+    } else if (livelloCaos == 5){ // Caos 5
+        var tiraDado = dicePercent();
+        if(tiraDado < 6) {
+            console.log("Eseguito");
+            return "Molto più debole del";
+        } else if(tiraDado >= 6 && tiraDado < 21){
+            return "Leggermente più debole del";
+        } else if(tiraDado >= 21 && tiraDado < 81){
+            return "Equivalente al";
+        } else if(tiraDado >= 81 && tiraDado < 96){
+            return "Un po' più forte del";
+        } else {
+            return "Molto più forte del";
+        }
+    } else if (livelloCaos >= 6 && livelloCaos < 8){ // Caos 6 o 7
+        var tiraDado = dicePercent();
+        if(tiraDado < 9) {
+            console.log("Eseguito");
+            return "Molto più debole del";
+        } else if(tiraDado >= 9 && tiraDado < 26){
+            return "Leggermente più debole del";
+        } else if(tiraDado >= 26 && tiraDado < 76){
+            return "Equivalente al";
+        } else if(tiraDado >= 76 && tiraDado < 93){
+            return "Un po' più forte del";
+        } else {
+            return "Molto più forte del";
+        }
+    } else if (livelloCaos >= 8 && livelloCaos < 10){ // Caos 8 o 9
+        var tiraDado = dicePercent();
+        if(tiraDado < 13) {
+            console.log("Eseguito");
+            return "Molto più debole del";
+        } else if(tiraDado >= 13 && tiraDado < 31){
+            return "Leggermente più debole del";
+        } else if(tiraDado >= 31 && tiraDado < 71){
+            return "Equivalente al";
+        } else if(tiraDado >= 71 && tiraDado < 89){
+            return "Un po' più forte del";
+        } else {
+            return "Molto più forte del";
+        }
+    }
+}
 
 // Lista Aggettivi NPC
 let aggettiviNpc = [
@@ -245,79 +321,5 @@ let sostantiviNpc = [
     "Commerciante",
     "Guerriero"
   ];
+
   
-function generatePowerLevel(livelloCaos){
-    if(livelloCaos==0){
-        return;
-    } else if (livelloCaos >= 1 && livelloCaos <3){ // Caos 1 o 2
-        var tiraDado = dicePercent();
-        if(tiraDado == 1 || tiraDado == 2) {
-            console.log("Eseguito");
-            return "Molto più debole del";
-        } else if(tiraDado >= 3 && tiraDado < 11){
-            return "Leggermente più debole del";
-        } else if(tiraDado >= 11 && tiraDado < 91){
-            return "Equivalente al";
-        } else if(tiraDado >= 91 && tiraDado < 99){
-            return "Un po' più forte del";
-        } else {
-            return "Molto più forte del";
-        }
-    } else if (livelloCaos >= 3 && livelloCaos < 5){ // Caos 3 o 4
-        var tiraDado = dicePercent();
-        if(tiraDado < 5) {
-            console.log("Eseguito");
-            return "Molto più debole del";
-        } else if(tiraDado >= 5 && tiraDado < 16){
-            return "Leggermente più debole del";
-        } else if(tiraDado >= 16 && tiraDado < 86){
-            return "Equivalente al";
-        } else if(tiraDado >= 86 && tiraDado < 97){
-            return "Un po' più forte del";
-        } else {
-            return "Molto più forte del";
-        }
-    } else if (livelloCaos == 5){ // Caos 5
-        var tiraDado = dicePercent();
-        if(tiraDado < 6) {
-            console.log("Eseguito");
-            return "Molto più debole del";
-        } else if(tiraDado >= 6 && tiraDado < 21){
-            return "Leggermente più debole del";
-        } else if(tiraDado >= 21 && tiraDado < 81){
-            return "Equivalente al";
-        } else if(tiraDado >= 81 && tiraDado < 96){
-            return "Un po' più forte del";
-        } else {
-            return "Molto più forte del";
-        }
-    } else if (livelloCaos >= 6 && livelloCaos < 8){ // Caos 6 o 7
-        var tiraDado = dicePercent();
-        if(tiraDado < 9) {
-            console.log("Eseguito");
-            return "Molto più debole del";
-        } else if(tiraDado >= 9 && tiraDado < 26){
-            return "Leggermente più debole del";
-        } else if(tiraDado >= 26 && tiraDado < 76){
-            return "Equivalente al";
-        } else if(tiraDado >= 76 && tiraDado < 93){
-            return "Un po' più forte del";
-        } else {
-            return "Molto più forte del";
-        }
-    } else if (livelloCaos >= 8 && livelloCaos < 10){ // Caos 8 o 9
-        var tiraDado = dicePercent();
-        if(tiraDado < 13) {
-            console.log("Eseguito");
-            return "Molto più debole del";
-        } else if(tiraDado >= 13 && tiraDado < 31){
-            return "Leggermente più debole del";
-        } else if(tiraDado >= 31 && tiraDado < 71){
-            return "Equivalente al";
-        } else if(tiraDado >= 71 && tiraDado < 89){
-            return "Un po' più forte del";
-        } else {
-            return "Molto più forte del";
-        }
-    }
-}

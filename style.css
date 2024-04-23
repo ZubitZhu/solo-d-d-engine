@@ -1,3 +1,21 @@
+*{
+    font-family: "Scaly Sans Remake";
+}
+
+h1{
+    font-family: 'Modesto Expanded';
+    color: #cd645e!important;
+}
+
 .bottone-genera {
     cursor: pointer !important;
+    border-radius: 0;
+}
+
+.bg-grigino{
+    background-color: #eee;
+}
+
+.rimuovi-margine{
+    margin: 0!important;
 }
