@@ -1,3 +1,3 @@
 function generaNpc(){
-    document.alert("Ciao!");
+    alert("Ciao!");
 }
